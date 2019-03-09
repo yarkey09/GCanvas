@@ -27,7 +27,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:3.0.1"
+        classpath 'com.android.tools.build:gradle:3.2.0'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
     }
 }
@@ -37,9 +37,9 @@ task clean(type: Delete) {
 }
 
 rootProject.extensions.sdks = [
-        'Gradle'        : '3.0.1',
+        'Gradle'        : '3.2.0',
         'CompileSDK'    : 26,
-        'BuildTool'     : '26.0.2',
+        'BuildTool'     : '28.0.2',
         'MinSDK'        : 16,
         'TargetSDK'     : 26,
         'Fresco'        : '1.8.0',

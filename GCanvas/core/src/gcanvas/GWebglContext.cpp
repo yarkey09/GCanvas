@@ -3563,13 +3563,13 @@ int GCanvas::executeWebGLCommands(const char *&cmd, int length) {
 //    LOG_D("GCanvas::executeWebGLCommands: end: %s",end);
     while (cmd < end) {
 
-        int index = atoi(cmd);
+        int index = atoi(cmd); //yarkey: 第一个字符转成 int代表命令序号
 
 //        LOG_I("[executeWebGLCommands]index=%d", index);
 
         if (index >= 1 && index < WEBGL_API_COUNT) //webgl
         {
-            ParseTokensSkip(cmd);
+            ParseTokensSkip(cmd); //yarkey: 经过指针计算，找到参数，参数也是一个 char ？
             if (NULL == g_webglFuncMap[index]) {
 //                LOG_W("[executeWebGLCommands] uncomplete cmd index:%d", index);
                 return -1;
